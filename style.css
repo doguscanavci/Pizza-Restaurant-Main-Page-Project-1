@@ -1,0 +1,956 @@
+*{
+  box-sizing:border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px; 
+  min-height: 100vh;
+  background-color: #FAF7F2;
+  overflow-x: hidden;
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* =============================== // DESKTOP // BANNER  BAŞLANGIÇ // =============================== */
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner-section {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #CE2829; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.banner-content .mobile-title {
+  display:none;
+}
+
+.brand-logo {
+  position: absolute;
+  width: 363px;
+  height: 50px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.banner-content p {
+  font-family: 'Satisfy', cursive;
+  font-style: italic;
+  color: #FFD700;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 4px; 
+}
+
+.banner-content h1 {
+  font-family: Roboto Condensed;
+  font-weight: 300;
+  font-size: 85px;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.banner-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.btn {
+  font-family: 'Barlow', sans-serif;
+  background-color: #FFD700;
+  color: #333;
+  border: none;
+  padding: 15px 55px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f0c400;
+}
+
+/* =============================== // DESKTOP // BANNER BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // CATEGORIES-1 BAŞLANGIÇ // =============================== */
+
+.categories1 {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 10px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: white;
+}
+
+.categories1 a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 105px;
+  text-decoration: none;  
+  color: inherit;     
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 105px;
+}
+
+.category-item span {
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* =============================== // DESKTOP // CATEGORIES-1 BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // MENU CARDS BAŞLANGIÇ // =============================== */
+
+.menu-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 1072px;
+  max-height: 449px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.menu-text {
+  max-width: 260px;
+  z-index: 2;
+}
+
+.menu-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* LARGE CARD */
+
+.menu-card-large {
+  grid-row: span 2;
+
+  background-color: #CE2829;
+  border-radius: 12px;
+  padding: 40px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-card-large img {
+  position: absolute;
+  right: 0px;
+  height: 104%;
+}
+
+.menu-card-large .menu-text h2 {
+  color: white;
+  font-family: 'Quattrocento';
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: -100px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.menu-card-large .menu-text p {
+  color: #FAF7F2;
+  font-size: 18px;
+  font-weight: 550;
+  
+}
+
+/* SMALL CARDS / BURGER */
+
+.menu-card-burger {
+  background-color: #292929;
+  border-radius: 12px;
+  padding: 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-card-burger .menu-text h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+
+.menu-card-burger img {
+  position: absolute;
+  right: 25px;
+  height: 75%;
+}
+
+/* SMALL CARDS / KURYE */
+
+.menu-card-kurye {
+  background-color: #FAF7F2;
+  border-radius: 12px;
+  padding: 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-card-kurye .menu-text h2 {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 30px;
+  color: #292929;
+}
+
+.menu-card-kurye span {
+  color: #CE2829;
+}
+
+.menu-card-kurye img {
+  position: absolute;
+  right: -10px;
+  height: 100%;
+}
+
+/* BUTTON */
+
+.menu-card .btn {
+  background-color: white;
+  color: #CE2829;
+
+  padding: 15px 25px;
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 40px;
+  border: none;
+}
+
+.menu-card .btn:hover {
+  background-color: #ffd000;
+  color: #000;
+}
+
+/* =============================== // DESKTOP // MENU CARDS BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // ORTA SAYFA BAŞLANGIÇ // =============================== */
+
+.yazi1 {
+  font-family: 'Satisfy';
+  font-size: 32px;
+  font-weight: bolder;
+  color: #CE2829;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.yazi2 {
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+/* =============================== // DESKTOP // ORTA SAYFA BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // CATEGORIES-2 BAŞLANGIÇ // =============================== */
+
+.categories2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.categories2 a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px; 
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  height: 60px;
+  min-width: 140px; 
+  color: #292929;
+}
+
+.categories2 span {
+  white-space: nowrap; 
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-weight: 560;
+}
+
+.category-ramen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 60px;
+}
+
+.category-ramen img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-ramen span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-pizza {
+  background-color: #292929;
+  color: #FAF7F2 !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 65px;
+}
+
+.category-pizza img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-pizza span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-burger {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 65px;
+}
+
+.category-burger img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-burger span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-french-fries {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 65px;
+}
+
+.category-french-fries img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-french-fries span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-fast-food {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 65px;
+}
+
+.category-fast-food img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-fast-food span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.category-soft-drinks {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  padding: auto 25px;
+  height: 65px;
+}
+
+.category-soft-drinks img {
+  width: 42px;
+  height: 42px;
+}
+
+.category-soft-drinks span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* =============================== // DESKTOP // CATEGORIES-2 BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // HIZLI SİPARİŞ BAŞLANGIÇ // =============================== */
+
+.hizli-siparis {
+  display: flex;
+  justify-content: center;
+  align-content: start;
+  gap: 30px;
+}
+
+.hizli-siparis-baslik {
+  display: flex;
+  justify-content: left;
+  font-family: 'Barlow';
+  font-size: 22px;
+  font-weight: 540;
+  margin-bottom: 4px;
+}
+
+.hizli-siparis-puan {
+  color: #5F5F5F;
+}
+
+.hizli-siparis-yorum {
+  color: #5F5F5F;
+}
+
+.hizli-siparis-fiyat {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hizli-siparis-sol-yazilar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hizli-siparis-sol img {
+  width: 275px;
+  height: 275px;
+}
+
+.hizli-siparis-orta-yazilar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hizli-siparis-orta img {
+  width: 275px;
+  height: 275px;
+}
+
+.hizli-siparis-sag-yazilar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hizli-siparis-sag img {
+  width: 275px;
+  height: 275px;
+}
+
+.hizli-siparis-sol, .hizli-siparis-orta, .hizli-siparis-sag {
+  background-color: white;
+}
+
+/* =============================== // DESKTOP // HIZLI SİPARİŞ BİTİŞ // =============================== */
+
+/* =============================== // DESKTOP // FOOTER BAŞLANGIÇ // =============================== */
+
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 60px 80px; 
+  padding: 60px 5% 20px 5%; 
+  margin-top: 70px;
+}
+
+footer-iletisim, .footer-menu, .footer-instagram {
+  flex: 0 1 300px; 
+}
+
+/* İLETİŞİM */
+
+.footer-logo {
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+.footer-iletisim p {
+  font-family: 'Barlow';
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.footer-iletisim p img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* MENU */
+
+.footer-menu h4 {
+  font-family: 'Barlow';
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu ul li {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* INSTAGRAM */
+
+.footer-instagram h4 {
+  font-family: 'Barlow';
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  border-top: 1px solid #333;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =============================== // DESKTOP // FOOTER BİTİŞ // =============================== */
+
+
+/* =============================== MOBILE RESPONSIVE DESIGN =============================== */
+
+@media (max-width: 600px){
+
+  /* =============================== // MOBILE // BANNER BAŞLANGIÇ // =============================== */
+
+  .banner-section{
+    width:100%;
+    height:100vh;
+  }
+
+  .banner-content{
+    top: 15%;
+    width:90%;
+  }
+
+  .banner-content .mobile-title{
+    display:block;
+    font-family:'Roboto Condensed';
+    font-weight:300;
+    font-size: 65px;
+    color:white;
+    line-height:1.1;
+  } 
+
+ .desktop-title{
+    display:none;
+  }
+
+  .brand-logo{
+    width: 300px;
+    height: auto;
+    top: 50px;
+  }
+
+  .banner-content p{
+    font-size:22px;
+    display:none;
+  }
+
+  .banner-section img{
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+  }
+
+  .btn{
+    padding:12px 30px;
+    font-size:16px;
+  }
+
+  /* =============================== // MOBILE // BANNER BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // CATEGORIES-1 BAŞLANGIÇ // =============================== */
+
+  .categories1 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 40px;
+    justify-items: center;
+  }
+
+  .category-item span{
+    font-size:16px;
+  }
+
+  /* =============================== // MOBILE // CATEGORIES-1 BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // MENU CARDS BAŞLANGIÇ // =============================== */
+
+  .menu-card{
+    grid-template-columns:1fr;
+    max-width:100%;
+    gap:20px;
+  }
+
+  /* LARGE CARD */
+
+  .menu-card-large{
+    grid-row:auto;
+  }
+
+  .menu-card-large .menu-text h2 {
+    font-size:34px;
+    margin-top:0;
+  }
+
+  .menu-card-large img {
+    right: 4px; 
+    height: 116%;  
+  }
+
+  /* BURGER */
+
+  .menu-card-burger .menu-text h2{
+    font-size:24px;
+  }
+
+  .menu-card-burger img {
+    right: 20px; 
+    height: 50%;  
+  }
+
+  /* KURYE */
+
+  .menu-card-kurye {
+    background-color: #FAF7F2;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    min-height: 220px;
+  }
+
+  .menu-card-kurye .menu-text {
+    max-width: 180px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .menu-card-kurye .menu-text h2 {
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 26px;
+    color: #292929;
+    line-height: 1.1;
+    margin-top: -70px;
+  }
+
+  .menu-card-kurye h2 span {
+    color: #CE2829;
+  }
+
+  .menu-card-kurye img {
+    height: 94%;
+    width: auto;
+    z-index: 1;
+  }
+
+  /* =============================== // MOBILE // MENU CARDS BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // ORTA SAYFA BAŞLANGIÇ // =============================== */
+
+  .orta-sayfa-yazi {
+    width: 100%;
+    padding-top: 250px;    
+    margin-bottom: -50px;
+    text-align: center;
+  }
+
+  .yazi1, .yazi2 {
+    display: block;
+    width: 100%;
+  }
+
+  .yazi1{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .yazi2{
+    font-size:36px;
+    text-align:center;
+    padding:0 15px;
+  }
+
+  /* =============================== // MOBILE // ORTA SAYFA BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // CATEGORIES-2 BAŞLANGIÇ // =============================== */
+
+  .categories2 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 60px;
+    justify-items: center;
+  }
+
+  .categories2 button{
+    padding:10px 18px;
+  }
+
+  /* =============================== // MOBILE // CATEGORIES-2 BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // HIZLI SİPARİŞ BAŞLANGIÇ // =============================== */
+
+  .hizli-siparis{
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    padding:0 15px;
+  }
+
+  .hizli-siparis img{
+    width:100%;
+    height:auto;
+  }
+
+  /* =============================== // MOBILE // HIZLI SİPARİŞ BİTİŞ // =============================== */
+
+  /* =============================== // MOBILE // FOOTER BAŞLANGIÇ // =============================== */
+
+  .footer{
+    grid-template-columns:1fr;
+    padding:40px 20px 0 20px;
+    text-align:center;
+  }
+
+  /* İLETİŞİM */
+
+  .footer-iletisim {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: center;
+    padding: 0 0 0 10px;
+  }
+
+  .footer-iletisim p {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    gap: 15px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer-iletisim p img {
+    width: 24px; 
+    flex-shrink: 0; 
+  }
+
+  /* MENU */
+
+  .footer-menu h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: center;
+    padding: 0 0 0 10px;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    padding: 0 0 0 10px;
+  }
+
+  /* INSTAGRAM */
+
+  .footer-instagram h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    padding: 0 0 0 10px;
+  }
+
+  .instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 10px;
+  }
+
+}
